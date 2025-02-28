@@ -7,17 +7,16 @@ public class UniqueWords
 		@param list ArrayList of strings to be examined
 		@return number of unique strings in the list
    */
-   public static int countUnique(ArrayList<String> list)
-   {
-	  int count = 0;
+   public static int countUnique(ArrayList<String> list){
+	   
+	   ArrayList<String> uniqueWords = new ArrayList<>();
 	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
+	  for (String word : list) {
+          if (!uniqueWords.contains(word)) { 
+              uniqueWords.add(word);
+          }
       }
-	  return count;
+      return uniqueWords.size(); 
    }
 
    public static void main(String[] args)
